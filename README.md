@@ -6,19 +6,24 @@ A Chrome extension that automatically detects and downloads **videos & photos** 
 
 ## Features
 
-- **X (Twitter)** — Download videos and photos from timeline, profile, search, bookmarks, and likes
+- **X (Twitter)** — Bulk download videos and photos from any profile, timeline, search, bookmarks, or likes page
 - **Instagram** — Download videos and photos from posts, reels, and stories
-- Auto-scroll to bulk-collect media without clicking anything
-- One-click download button injected directly on every video
-- Saves files organized into a local `XMedia/` folder
-- Works completely offline — no data sent to any server
-- Dark-mode popup UI with gallery view and download history
+- **Scan** button to instantly collect all media on the current page
+- Filter by **Video** or **Photo** before downloading
+- **Select All** or pick individual items from the gallery
+- **Download All**, **Download Selected**, or **ZIP Selected** — your choice
+- Live counter badge on the extension icon shows how many items are found
+- Auto-scroll to load more posts automatically
+- One-click **⬇** button injected directly on every video on the page
+- Everything runs locally — no data sent to any server
 
 ---
 
-## Screenshots
+## Screenshot
 
-> *(Add screenshots of the popup and download button here)*
+![Popup UI](https://i.imgur.com/placeholder.png)
+
+> The popup showing 70 media items found on Cristiano Ronaldo's profile — videos (VID) and photos (IMG) listed in a grid with bulk download options.
 
 ---
 
@@ -28,78 +33,88 @@ A Chrome extension that automatically detects and downloads **videos & photos** 
 
 ### Step 1 — Download the extension
 
-**Option A — Download ZIP:**
-1. Click the green **Code** button on the GitHub repo page
+**Option A — Download ZIP (easiest):**
+1. Click the green **Code** button at the top of this page
 2. Select **Download ZIP**
 3. Extract the ZIP to any folder on your computer
 
 **Option B — Clone with Git:**
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git clone https://github.com/ngoxuanphap/social-media-downloader.git
 ```
 
 ### Step 2 — Enable Developer Mode in Chrome
 
-1. Open Chrome and navigate to: `chrome://extensions`
+1. Open Chrome and go to: `chrome://extensions`
 2. Toggle **Developer mode** ON (top-right corner)
 
 ### Step 3 — Load the extension
 
 1. Click **Load unpacked**
-2. Select the `social-media-downloader/` folder (the one that contains `manifest.json`)
-3. The **X Media Downloader** icon will appear in your Chrome toolbar
+2. Select the `social-media-downloader/` folder (the one containing `manifest.json`)
+3. The **XMD** icon will appear in your Chrome toolbar
 
-> **Edge:** Go to `edge://extensions` → turn on **Developer mode** → **Load unpacked**
-> **Brave:** Go to `brave://extensions` → turn on **Developer mode** → **Load unpacked**
+> **Edge:** `edge://extensions` → Developer mode ON → Load unpacked  
+> **Brave:** `brave://extensions` → Developer mode ON → Load unpacked
 
 ---
 
 ## How to Use
 
-### Downloading from X (Twitter)
+### Step-by-step (X or Instagram)
 
-1. Go to any X page:
-   - Home feed: `x.com/home`
-   - Profile media tab: `x.com/username/media`
-   - Search results: `x.com/search?q=keyword`
-   - Bookmarks: `x.com/i/bookmarks`
-   - Likes: `x.com/username/likes`
+1. **Navigate** to the page you want to download from (see supported pages below)
+2. **Click the XMD icon** in your toolbar to open the popup
+3. **Click Scan** — the extension scans the current page and displays all detected media in a grid
+4. The counter at the top right shows **N found** (e.g. `70 found`)
+5. **Filter** what you want:
+   - Click **Video** to show only videos
+   - Click **Photo** to show only photos
+   - Leave both active to see everything
+6. **Select** what to download:
+   - Check **Select All** to select everything
+   - Or click individual thumbnails to select/deselect
+7. **Choose your download action:**
 
-2. Click the **X Media Downloader** icon in your toolbar to open the popup
-
-3. Configure options:
-
-   | Option | Description |
+   | Button | What it does |
    |--------|-------------|
-   | **Auto-scroll** | Automatically scrolls the page to load more posts |
-   | **Auto-download** | Downloads every detected video/photo automatically |
+   | **Download All (N)** | Downloads every detected item immediately |
+   | **Download Selected (N)** | Downloads only the items you selected |
+   | **ZIP Selected (N)** | Packages selected items into a single `.zip` file |
 
-4. Click **Start** — the extension will collect and download all detected media
-
-5. Files are saved to your Downloads folder under `XMedia/`
+8. Files are saved to your Downloads folder under `XMedia/`
 
 ---
 
-### Downloading from Instagram
+### Supported Pages
 
-1. Go to any Instagram page:
-   - A post: `instagram.com/p/XXXXX`
-   - A reel: `instagram.com/reel/XXXXX`
-   - A profile: `instagram.com/username`
-   - Stories are captured automatically as you view them
+#### X (Twitter)
+| Page | URL |
+|------|-----|
+| Home timeline | `x.com/home` |
+| Profile media tab | `x.com/username/media` |
+| Profile likes | `x.com/username/likes` |
+| Search results | `x.com/search?q=keyword` |
+| Bookmarks | `x.com/i/bookmarks` |
 
-2. Open the popup and click **Start**
+#### Instagram
+| Page | URL |
+|------|-----|
+| A post | `instagram.com/p/POSTID` |
+| A reel | `instagram.com/reel/REELID` |
+| A profile | `instagram.com/username` |
+| Stories | Captured automatically as you view them |
 
-3. The extension captures the media URL in real time and queues the download
-
-> **Note:** You must be logged in to Instagram for the extension to work.
+> **Note:** You must be **logged in** to X and Instagram for the extension to detect media.
 
 ---
 
 ### One-Click Download Button
 
-A floating **⬇** button appears on every video visible on the page.
-Click it to download that specific video immediately, without running a full scrape.
+A floating **⬇** button is injected directly onto every video element visible on the page.  
+Click it to download that specific video immediately without opening the popup.
+
+The **XMD** badge on the left edge of the screen shows a live count of all media detected so far on the current page.
 
 ---
 
