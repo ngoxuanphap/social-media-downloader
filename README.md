@@ -21,7 +21,7 @@ A Chrome extension that automatically detects and downloads **videos & photos** 
 
 ## Screenshot
 
-![Popup UI](screenshots/popup.png)
+![Popup UI](screenshots/Screenshot%202026-05-23%20221511.png)
 
 > The popup showing 70 media items found on a profile page — videos (VID) and photos (IMG) listed in a grid, ready to Download All, Download Selected, or ZIP.
 
