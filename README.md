@@ -1,4 +1,4 @@
-# X Media Downloader
+# Social Media Downloader
 
 A Chrome extension that automatically detects and downloads **videos & photos** from **X (Twitter)** and **Instagram** — no third-party website needed, everything runs locally in your browser.
 
@@ -21,9 +21,9 @@ A Chrome extension that automatically detects and downloads **videos & photos** 
 
 ## Screenshot
 
-![Popup UI](https://i.imgur.com/placeholder.png)
+![Popup UI](screenshots/popup.png)
 
-> The popup showing 70 media items found on Cristiano Ronaldo's profile — videos (VID) and photos (IMG) listed in a grid with bulk download options.
+> The popup showing 70 media items found on a profile page — videos (VID) and photos (IMG) listed in a grid, ready to Download All, Download Selected, or ZIP.
 
 ---
 
